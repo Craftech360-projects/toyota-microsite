@@ -17,7 +17,7 @@ export default function TermsConditionsPage({ onBack }: TermsConditionsPageProps
           />
         
         {/* Back Button (Icon-only, positioned over image) */}
-        <button 
+        {/* <button 
           onClick={onBack} 
           className="absolute top-4 left-4 z-10 text-white bg-black/30 rounded-full p-2 hover:bg-black/50 transition-colors"
           aria-label="Go back"
@@ -25,7 +25,7 @@ export default function TermsConditionsPage({ onBack }: TermsConditionsPageProps
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-        </button>
+        </button> */}
       </div>
 
       {/* T&C Content */}
@@ -95,6 +95,14 @@ export default function TermsConditionsPage({ onBack }: TermsConditionsPageProps
               city have been allotted.
             </p>
           </section>
+
+          <button
+            onClick={onBack} 
+            className="w-full bg-red-600 text-white uppercase py-4 text-lg hover:bg-red-700 transition-colors disabled:bg-gray-500"
+          >
+            Continue
+          </button>
+
         </div>
       </div>
     </div>

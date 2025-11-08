@@ -81,9 +81,10 @@ interface WinPopupProps {
   registrationData: RegistrationData | null
   gameResults: UserGameResult
   onFinish: () => void
+  onClose: () => void
 }
 
-export default function WinPopup({ registrationData, gameResults, onFinish }: WinPopupProps) {
+export default function WinPopup({ registrationData, gameResults, onFinish, onClose }: WinPopupProps) {
   useEffect(() => {
   if (!registrationData || !registrationData.uid) return
 
@@ -130,31 +131,37 @@ export default function WinPopup({ registrationData, gameResults, onFinish }: Wi
 }, [registrationData])
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
+    <div className="fixed inset-0 flex items-center justify-center z-50 px-4 bg-black/80">
+      <div className="bg-white sm:p-8 max-w-md w-full border border-gray-800 shadow-2xl relative">
 
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-center max-w-md mx-auto">
           {/* Hero Image */}
-          <div className="mb-8">
-            <img
-              src="/ui/page1.png"
-              alt="Drum Tao"
-              className="w-full h-auto rounded-lg"
-            />
+          <div className="relative mb-6">
+            <div className="mb-8">
+              <img
+                src="/ui/page2.png"
+                alt="Drum Tao"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
           {/* Success Message */}
-          <h1 className="text-4xl font-bold mb-4">Arigato <br/> (Thankyou !!!!)</h1>
-          <p className="text-gray-300 text-lg mb-12">Your registration has been successfully completed.</p>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">
+              Arigato <br /> (Thankyou !!!!)
+            </h1>
+            <p className="text-black text-md mb-8 font-bold">
+              Your registration has been successfully completed.
+            </p>
 
-          {/* CTA Button */}
-          <button
-            onClick={onFinish}
-            className="w-full bg-red-600 text-white py-4 font-bold text-lg rounded-lg hover:bg-red-700 transition-colors"
-          >
-            FINISH
-          </button>
-        </div>
+            {/* CTA Button */}
+            <button
+              onClick={onFinish}
+              className="w-[80vw] bg-red-600 mb-6 text-white py-3 sm:py-4 text-base font-semibold uppercase sm:text-lg hover:bg-red-700 transition-colors"          >
+              FINISH
+            </button>
+          </div>
+
       </div>
     </div>
   )

@@ -76,6 +76,8 @@
 
 @theme inline {
   --font-toyota: "ToyotaType-Bold", sans-serif;
+  --font-toyota-bold: "ToyotaType-Bold", sans-serif;
+  --font-toyota-regular: "ToyotaType-Book", sans-serif;
   --font-sans: var(--font-toyota);
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
@@ -127,6 +129,15 @@
   /* added custom styles for italic text and scrollbar */
   .font-italic {
     font-style: italic;
+  }
+
+  /* Toyota font utilities */
+  .font-toyota-bold {
+    font-family: var(--font-toyota-bold);
+  }
+
+  .font-toyota-regular {
+    font-family: var(--font-toyota-regular);
   }
 
   /* Smooth scrolling for popups */
