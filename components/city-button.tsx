@@ -15,7 +15,7 @@ export function CityButton({ name, date, image, onClick }: CityButtonProps) {
       className="h-auto p-0 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg" // Removes hover bg
       onClick={onClick}
     >
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col justify-center items-center p-2">
         <Image
           src={image}
           alt={name}

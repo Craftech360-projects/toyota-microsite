@@ -105,7 +105,7 @@ interface CitySelectorProps {
 export default function CitySelector({ cities, onCitySelect }: CitySelectorProps) {
   return (
     <div id="cities">
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid  sm:grid-cols-3 gap-4 sm:gap-6">
         {cities.map((city) => (
           <CityButton
             key={city.id}

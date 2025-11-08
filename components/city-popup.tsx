@@ -171,7 +171,7 @@ export default function CityPopup({ cityConfig, onClose, onPlay }: CityPopupProp
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 px-4 bg-black/70">
-      <div className="bg-black rounded-2xl p-6 sm:p-8 max-w-md w-full border border-gray-800 shadow-2xl relative">
+      <div className="bg-white sm:p-8 max-w-md w-full border border-gray-800 shadow-2xl relative">
 
         {/* Image Section with Close Button */}
         <div className="relative mb-6">
@@ -180,61 +180,70 @@ export default function CityPopup({ cityConfig, onClose, onPlay }: CityPopupProp
             alt="Event Banner"
             width={600}
             height={300}
-            className="rounded-xl w-full object-cover"
+            className="w-full object-cover"
           />
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 text-white hover:text-red-500 transition-colors"
+            className="absolute top-3 right-3 transition-transform hover:scale-110"
           >
             <svg
-              className="w-7 h-7 sm:w-8 sm:h-8"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
               fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
+              <rect width="32" height="32" fill="#FF0000" />
               <path
+                d="M26 16C26 10.4771 21.5228 6 16 6C10.4771 6 6 10.4771 6 16C6 21.5228 10.4771 26 16 26C21.5228 26 26 21.5228 26 16Z"
+                stroke="white"
+                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
+              />
+              <path
+                d="M18.9994 19L13 13M13.0006 19L19 13"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
+
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6 text-white">DRUM TAO</h1>
+        <h1 className="text-4xl sm:text-5xl text-center mb-6 text-black">DRUM TAO</h1>
 
         {/* City Badge */}
-        <div className="bg-red-600 text-white py-2 px-0 text-center font-bold mb-6">
+        <div className="text-red-500 font-bold py-2 px-0 text-center mb-6 text-lg">
           {city_name.toUpperCase()}
         </div>
 
         {/* Date Info */}
         <div className="text-center mb-8">
-          <p className="text-white font-semibold text-sm sm:text-base">{date}</p>
-          <p className="text-white font-semibold text-sm sm:text-base">{day}</p>
+          <p className="text-black font-semibold text-sm sm:text-base">{date}</p>
+          <p className="text-black font-semibold text-sm sm:text-base">{day}</p>
         </div>
 
         {/* Venue */}
         <div className="border-2 border-red-500 rounded-lg p-4 mb-8 text-center">
-          <p className="text-white font-bold mb-2">Venue</p>
-          <p className="text-white text-sm sm:text-base leading-relaxed whitespace-pre-line">{formattedVenue}</p>
+          <p className="text-black font-bold mb-2">Venue</p>
+          <p className="text-black text-sm sm:text-base leading-relaxed whitespace-pre-line">{formattedVenue}</p>
         </div>
 
         {/* Gates Open Time */}
         <div className="text-center mb-8">
-          <p className="text-white font-semibold text-sm mb-2">Gates Open Time</p>
-          <p className="text-white text-lg font-bold">{gateTime}</p>
+          <p className="text-black font-semibold text-sm mb-2">Gates Open Time</p>
+          <p className="text-black text-lg font-bold">{gateTime}</p>
         </div>
 
         {/* Play Button */}
         <button
           onClick={onPlay}
-          className="w-full bg-red-600 text-white py-3 sm:py-4 font-bold text-base sm:text-lg hover:bg-red-700 transition-colors"
-        >
-          PLAY. WIN. EXPERIENCE
-        </button>
+          className="w-full bg-red-600 text-white py-3 sm:py-4 text-base font-semibold uppercase sm:text-lg hover:bg-red-700 transition-colors"
+        > Register Now</button>
       </div>
     </div>
   )

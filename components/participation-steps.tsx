@@ -1,8 +1,8 @@
 export default function ParticipationSteps() {
   const steps = [
-    { number: 1, title: "Choose your city", color: "text-red-500" },
-    { number: 2, title: "Fill out the registration form", color: "text-red-500" },
-    { number: 3, title: "Let's start the quiz fun!", color: "text-red-500" },
+    { number: 1, title: "Choose your city", color: "text-white" },
+    { number: 2, title: "Fill out the registration form", color: "text-white" },
+    { number: 3, title: "Let's start the quiz fun!", color: "text-white" },
     { number: 4, title: "Check your email for the entry QR code", color: "text-white" },
   ]
 
@@ -14,18 +14,20 @@ export default function ParticipationSteps() {
         passes to Drum Tao Live
       </h2>
 
-      <div className="bg-gray-900 border border-red-500 rounded-lg p-6 sm:p-8">
-        <h3 className="text-lg sm:text-xl font-bold text-red-500 mb-6">HOW TO PARTICIPATE :</h3>
+    <div className="p-[2px] rounded-lg bg-gradient-to-b from-red-500 from-60%  to-81%">
+  <div className="bg-gray-900 rounded-lg p-6 sm:p-8">
+    <h2 className="text-lg sm:text-xl font-bold text-red-500 mb-6">HOW TO PARTICIPATE :</h2>
 
-        <div className="space-y-4">
-          {steps.map((step) => (
-            <div key={step.number} className="flex gap-4">
-              <div className="text-red-500 font-bold text-lg flex-shrink-0 w-20">STEP {step.number}:</div>
-              <p className={`${step.color} text-sm sm:text-base leading-relaxed`}>{step.title}</p>
-            </div>
-          ))}
+    <div className="space-y-4">
+      {steps.map((step) => (
+        <div key={step.number} className="flex gap-4">
+          <div className="text-red-500 text-sm flex-shrink-0 w-20">STEP {step.number}:</div>
+          <p className={`${step.color} text-sm sm:text-base leading-relaxed`}>{step.title}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       <p className="text-center text-lg sm:text-xl font-bold mt-8 mb-8">
         To continue, please

@@ -182,7 +182,7 @@ export async function POST(req: Request) {
 
   // 🟢 CASE 1: Vijayawada → Use Supabase hosted image
     if (city.toLowerCase().trim() === "vijayawada") {
-      publicImageUrl = "https://ozkbnimjuhaweigscdby.supabase.co/storage/v1/object/public/toyota-user-tickets/default/vijayawada-email.png"
+      publicImageUrl = "https://ozkbnimjuhaweigscdby.supabase.co/storage/v1/object/public/toyota-user-tickets/default/Emailer.png"
     }
 
     // 🟡 CASE 2: Other cities → Generate ticket
